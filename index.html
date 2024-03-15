@@ -62,8 +62,75 @@
                         <span class="shadow-txt">Steven</span>
                     </h1>
                 </div>
-                <div class="slide-right">
+                <div class="slide-right" id="about">
                     <span></span>
+                </div>
+            </div>
+        </section>
+        <section class="content about">
+            <div class="info d-flex align-items-center justify-content-center">
+                <div class="info-image col-lg-6 col-sm-12">
+                    <img src="assets/about.jpg" alt="" class="border-raduis-2">
+                </div>
+                <div class="infos-txt col-lg-6 col-sm-12">
+                    <h2>
+                        <span class="d-block">Steven</span>
+                        Walker
+                    </h2>
+                    <div class="info-details mt-4 d-flex">
+                        <ul>
+                            <li>
+                                <span>
+                                    <span>Age :</span>
+                                    <span>27 Years</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Nationality :</span>
+                                    <span>German</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Freelance :</span>
+                                    <span>Available</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Langages :</span>
+                                    <span>English</span>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span>
+                                    <span>Address :</span>
+                                    <span>London</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Phone :</span>
+                                    <span>21 184 010</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Email :</span>
+                                    <span>contact@steven.net</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <span>Skype :</span>
+                                    <span>steven.walker</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -74,7 +141,7 @@
 
 
     <script>
-        document.querySelector('.container').addEventListener('wheel', function(event) {
+        document.querySelector('.wrapper').addEventListener('wheel', function(event) {
             event.preventDefault();
             this.scrollLeft += event.deltaY;
         });
