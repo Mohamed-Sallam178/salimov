@@ -1,0 +1,218 @@
+// start fixed edits
+$primary-color: #ffb400;
+$second-bg-color:#222222;
+:root {
+  --primary-color: #{$primary-color};
+  --second-bg-color:#{$second-bg-color};
+}
+body {
+  position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #0b0b0b;
+    font-family: "Livvic", sans-serif;
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+}
+  .wrapper {
+    width: 100%;
+    white-space: nowrap; 
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+  .content {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top; 
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+  // end fix edit 
+  
+
+  // start customize header
+  .setting {
+    position: fixed;
+    padding: 10px 16px 10px 14px;
+    background-color: #444;
+    border-radius: 0 4px 4px 0;
+    top: 150px;
+    left: 0;
+    cursor: pointer;
+    i{
+      font-size: 25px;
+      color: #fff;
+    }
+}
+  header{
+    .inner-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      li:not(:last-child){
+        margin-right: 35px;
+      }
+      li{
+        font-size: 18px;
+        a:before{
+          content: '';
+          position: absolute;
+          height: 15px;
+          width: 100%;
+          background: #ffb404;
+          top: -32px;
+          left: 0;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          transition: all .3s;
+          transform: translateY(-100%);
+          transition: all .3s;
+        }
+        &:hover a:before{
+          transform: translateY(0);
+        }
+        &:hover a{
+          color: $primary-color;
+        }
+      }
+      li.active a{
+        color: $primary-color;
+        &:before {
+          content: '';
+          position: absolute;
+          height: 15px;
+          width: 100%;
+          background: #ffb404;
+          top: -32px;
+          left: 0;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          transform: translateY(0);
+      }
+      }
+      a{
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        transition: all .3s;
+      }
+    }
+    .head-email{
+      p{
+        color: #fff;
+        font-size: 18px;
+      }
+      span{
+        color: $primary-color;
+      }
+    }
+  }
+  // end customize header
+  
+  // start customize home section
+  .home{
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      & > span{
+        padding: 0 200px;
+      }
+      span:nth-child(2){
+        position: relative;
+        .experience{
+          position: absolute;
+          font-size: 18px;
+          width: 200px;
+          right: 100px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #fff;
+          line-height: 1.6;
+          font-weight: 400;
+        }
+      }
+      .shadow-txt {
+        font-size: 125px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: #333;
+        text-shadow: 8px 8px #fff, 20px 20px #222;
+      }
+      .dot{
+        color: #ffb400;
+        text-shadow: 8px 8px #ffb400, 20px 20px #222;
+      }
+    }
+    .slide-right {
+      span{
+        display: block;
+        -webkit-transition: 1s;
+        transition: 1s;
+        z-index: 1;
+        margin-bottom: 0;
+        width: 60px;
+        height: 60px;
+        background: none;
+        position: relative;
+        overflow: hidden;
+        background-color: $primary-color;
+        border-radius: 50%;
+        text-align: center;
+
+        &::before,&::after{
+          content: "\f178";
+          font-family: FontAwesome;
+          position: absolute;
+          width: 60px;
+          line-height: 60px;
+          color: #fff;
+          transition: all .3s;
+          font-size: 25px;
+        }
+        &::before{
+          top: 0;
+          left: 0;
+        }
+        &::after{
+          top: 0;
+          left: -60px;
+        }
+      }
+      &:hover span::after{
+        left: 0 !important;
+      }
+      &:hover span::before{
+        left: 60px !important;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
