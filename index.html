@@ -41,13 +41,21 @@
                     <span>contact@steven.net</span>
                 </p>
             </div>
+            <div class="mobile-menu">
+                <input type="checkbox" id="navigator" class="navigator-menu d-none">
+                <label for="navigator" class="navigation-toggel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
         </div>
     </header>
     <div class="setting">
         <i class="fa-solid fa-gear"></i>
     </div>
     <div class="wrapper">
-        <section class="content home" id="home">
+        <section class="content home fix-sec" id="home">
             <div class="cont-sec d-flex align-items-center">
                 <div class="all-text">
                     <h1>
@@ -67,8 +75,8 @@
                 </div>
             </div>
         </section>
-        <section class="content about">
-            <div class="info d-flex align-items-center justify-content-center">
+        <section class="content about fix-sec">
+            <div class="info d-flex align-items-center justify-content-center flex-wrap">
                 <div class="info-image col-lg-6 col-sm-12">
                     <img src="assets/about.jpg" alt="" class="border-raduis-2">
                 </div>
@@ -77,8 +85,8 @@
                         <span class="d-block">Steven</span>
                         Walker
                     </h2>
-                    <div class="info-details mt-4 d-flex">
-                        <ul>
+                    <div class="info-details mt-4 d-flex flex-wrap">
+                        <ul class="col-lg-6 col-sm-12">
                             <li>
                                 <span>
                                     <span>Age :</span>
@@ -104,7 +112,7 @@
                                 </span>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="col-lg-6 col-sm-12">
                             <li>
                                 <span>
                                     <span>Address :</span>
