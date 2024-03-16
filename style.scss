@@ -28,7 +28,6 @@ body {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  height: 100vh;
   & > div{
     height: 100%;
   }
@@ -303,6 +302,60 @@ body {
 }
 // end customize about section 
 
+// start customize skills section 
+.skills{
+  .all-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-title{
+    margin-right: 150px;
+    margin-left: 150px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: scale(-1, -1);
+    height: 100vh;
+    h3{
+      font-size: 60px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+  }
+  .skills-cont{
+    display: flex;
+
+    .item-shape:first-child{
+      margin-bottom: 60px;
+    }
+    .item-shape{
+      text-align: center;
+      span{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $second-bg-color;
+        border-radius: 30px;
+        transform: rotate(45deg);
+      }
+      i{
+        transform: rotate(-45deg);
+        color: $primary-color;
+        font-size: 35px;
+      }
+      h4{
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+      }
+    }
+  }
+}
+// end customize skills section 
 
 
 
@@ -320,6 +373,9 @@ body {
 
 // start customize media 
 @media(min-width:1024px){
+  .fix-sec{
+    height: 100vh;
+  }
   .wrapper {
     width: 100%;
     white-space: nowrap; 
@@ -343,6 +399,11 @@ body {
       width: 40%;
     }
   }
+  .skills-cont{
+    & > div:not(:first-child){
+      margin-left: 80px;
+    }
+  }
 }
 @media(max-width:1024px){
   header .menu,.menu,.head-email,.experience{
@@ -363,6 +424,17 @@ body {
       }
     }
   }
+  .skills{
+    .all-cont{
+      flex-direction: column;
+      .custom-title{
+        writing-mode: unset;
+        transform: scale(1, 1);
+        height: auto;
+        margin: 70px 0;
+      }
+    }
+  }
 }
 @media(min-width:768px) and (max-width:1200px){
   .about{
@@ -372,8 +444,22 @@ body {
         width: 70%;
       }
     }
+    .infos-txt{
+      h2{
+        text-align: center;
+        margin: 50px 0;
+      }
+    }
+  }
+  .skills{
+    .skills-cont{
+      & > div:not(:first-child){
+        margin-left: 50px;
+      }
+    }
   }
 }
+
 @media(max-width:767px){
   .home{
     h1{
@@ -383,6 +469,29 @@ body {
       }
       & > span{
         padding: 0 60px;
+      }
+    }
+    .skills{
+      .all-cont{
+        flex-direction: column;
+        .custom-title{
+          writing-mode: unset;
+          transform: scale(1, 1);
+          height: auto;
+          margin: 70px 0;
+          h3{
+            font-size: 35px;
+          }
+        }
+      }
+      .skills-cont{
+        flex-direction: column;
+        & > div {
+          display: flex;
+        }
+        .item-shape{
+          margin: 0 30px 60px 30px;
+        }
       }
     }
   }
