@@ -38,6 +38,20 @@ section{
     height: inherit;
   }
 }
+.custom-title{
+  margin-right: 150px;
+  margin-left: 150px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: scale(-1, -1);
+  height: 100vh;
+  h3{
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+}
 // start customize scrollbar-Y
 ::-webkit-scrollbar {
   width: 5px;
@@ -317,20 +331,6 @@ section{
     justify-content: center;
     align-items: center;
   }
-  .custom-title{
-    margin-right: 150px;
-    margin-left: 150px;
-    text-align: center;
-    writing-mode: vertical-rl;
-    transform: scale(-1, -1);
-    height: 100vh;
-    h3{
-      font-size: 60px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: #fff;
-    }
-  }
   .skills-cont{
     display: flex;
 
@@ -363,6 +363,73 @@ section{
     }
   }
 }
+.resume{
+  .all-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .timeline{
+      ol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        row-gap: 45px;
+        &::after{
+          content: '';
+          width: 70%;
+          height: 2px;
+          background: $second-bg-color;
+          top: 50%;
+          transform: translateY(-50%);
+          position: absolute;
+      }
+        li{
+          flex: 0 0 33.3%;
+          max-width: 33.3%;
+          .all-exp{
+            padding: 10px;
+            .experience{
+              padding: 25px;
+              background-color: $second-bg-color;
+              border-radius: 1rem;
+              position: relative;
+              // .bottom-bord::after,.top-bord::after {
+              //   content: '';
+              //   position: absolute;
+              //   left: 50%;
+              //   bottom: -28px;
+              //   transform: translateX(-50%);
+              //   border-width: 15px;
+              //   border-style: solid;
+              //   border-color: $second-bg-color transparent transparent transparent;
+              //   &.bottom-bord:after{
+              //   bottom: -28px;
+              //   }
+              //   &.top-bord:after{
+              //     top: -28px;
+              //     }
+              h4{
+                color: $primary-color;
+                font-size: 21px;
+                margin-bottom: 20px;
+              }
+              p{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+              }
+              p:first-of-type{
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
 // end customize skills section 
 
 
