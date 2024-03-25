@@ -384,16 +384,15 @@ header .mobile-menu label span:not(:first-child) {
 .resume .all-cont .timeline ol li .all-exp .experience p:first-of-type {
   margin-bottom: 8px;
 }
-
 @media (min-width: 1024px) {
-  .wrapper {
+  .resume .wrapper {
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     height: 100vh;
   }
-  .content {
+  .resume .content {
     display: inline-block;
     white-space: normal;
     vertical-align: top;
@@ -401,40 +400,40 @@ header .mobile-menu label span:not(:first-child) {
     padding: 20px;
     box-sizing: border-box;
   }
-  .mobile-menu {
+  .resume .mobile-menu {
     display: none !important;
   }
-  .about .info-image {
+  .resume .about .info-image {
     width: 40%;
   }
-  .skills-cont > div:not(:first-child) {
+  .resume .skills-cont > div:not(:first-child) {
     margin-left: 80px;
   }
 }
 @media (max-width: 1024px) {
-  header .menu, .menu, .head-email, .experience {
+  .resume header .menu, .resume .menu, .resume .head-email, .resume .experience {
     display: none;
   }
-  header .inner-header {
+  .resume header .inner-header {
     justify-content: flex-end;
   }
-  .home .cont-sec {
+  .resume .home .cont-sec {
     justify-content: center;
     flex-direction: column;
   }
-  .home .slide-right {
+  .resume .home .slide-right {
     margin: 3rem auto 0;
   }
-  .home .slide-right span::before {
+  .resume .home .slide-right span::before {
     transform: rotate(90deg);
   }
-  .about {
+  .resume .about {
     padding: 0 2rem;
   }
-  .skills .all-cont {
+  .resume .skills .all-cont {
     flex-direction: column;
   }
-  .skills .all-cont .custom-title {
+  .resume .skills .all-cont .custom-title {
     writing-mode: unset;
     transform: scale(1, 1);
     height: auto;
@@ -442,69 +441,69 @@ header .mobile-menu label span:not(:first-child) {
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  .about .info-image img {
+  .resume .about .info-image img {
     width: 70% !important;
   }
-  .about .infos-txt h2 {
+  .resume .about .infos-txt h2 {
     text-align: center;
     margin: 50px 0;
     font-size: 55px !important;
   }
-  .about .info-details {
+  .resume .about .info-details {
     max-width: 500px;
     margin: auto;
   }
-  .skills .skills-cont > div:not(:first-child) {
+  .resume .skills .skills-cont > div:not(:first-child) {
     margin-left: 50px;
   }
 }
 @media (max-width: 767px) {
-  section {
+  .resume section {
     min-height: initial;
     height: auto;
   }
-  .home h1 {
+  .resume .home h1 {
     line-height: 65px;
   }
-  .home h1 .shadow-txt {
+  .resume .home h1 .shadow-txt {
     font-size: 45px;
   }
-  .home h1 > span {
+  .resume .home h1 > span {
     padding: 0 60px;
   }
-  .about .info-image img {
+  .resume .about .info-image img {
     width: 100%;
   }
-  .about .infos-txt h2 {
+  .resume .about .infos-txt h2 {
     font-size: 36px;
     text-align: center;
     margin: 3rem 0;
   }
-  .about .infos-txt .info-details {
+  .resume .about .infos-txt .info-details {
     justify-content: flex-start;
   }
-  .about .infos-txt .info-details ul li {
+  .resume .about .infos-txt .info-details ul li {
     font-size: 16px;
   }
-  .skills .all-cont {
+  .resume .skills .all-cont {
     flex-direction: column;
   }
-  .skills .all-cont .custom-title {
+  .resume .skills .all-cont .custom-title {
     writing-mode: unset;
     transform: scale(1, 1);
     height: auto;
     margin: 70px 0;
   }
-  .skills .all-cont .custom-title h3 {
+  .resume .skills .all-cont .custom-title h3 {
     font-size: 35px;
   }
-  .skills .all-cont .skills-cont {
+  .resume .skills .all-cont .skills-cont {
     flex-direction: column;
   }
-  .skills .all-cont .skills-cont > div {
+  .resume .skills .all-cont .skills-cont > div {
     display: flex;
   }
-  .skills .all-cont .skills-cont .item-shape {
+  .resume .skills .all-cont .skills-cont .item-shape {
     margin: 0 30px 60px 30px;
   }
 }/*# sourceMappingURL=style.css.map */
