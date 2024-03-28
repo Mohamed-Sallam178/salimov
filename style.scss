@@ -447,7 +447,7 @@ section{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .row-cards{
     width: 100%;
@@ -498,7 +498,7 @@ section{
 
 
 
-
+/*------------------------------*/
 
 
 
@@ -576,7 +576,23 @@ section{
 .top-bord:before{
   top: -28px;
 }
+.facts{
+  .fa-top {
+    margin-top: -200px;
+  }
+  .fa-bottom {
+    margin: 200px 30px 0;
+  }
 }
+}
+
+
+
+
+/*---------------------------------------*/
+
+
+
 @media(max-width:1024px){
   section{
     min-height: 450px !important;
@@ -593,6 +609,14 @@ section{
   }
   header .inner-header{
     justify-content: flex-end;
+  }
+  .opposite,.separator{
+    display: none;
+  }
+  .mobile-up-img{
+    transform: translateY(-100%) translateX(-50%);
+    position: relative;
+    left: 50%;
   }
   .home{
     & > div{
@@ -618,6 +642,7 @@ section{
     }
   }
   .resume{
+    margin-bottom: 50px;
     .all-cont{
       flex-direction: column;
       .timeline{
@@ -638,7 +663,19 @@ section{
       }
     }
   }
+  .facts{
+    .row-cards{
+      flex-direction: column;
+      padding: 100px 0;
+    }
+  }
 }
+
+
+
+/*--------------------------------*/
+
+
 @media(min-width:768px) and (max-width:1200px){
   section{
     padding: 0 !important;
@@ -672,11 +709,19 @@ section{
       }
     }
   }
+  .facts{
+    .fa-top {
+      margin-right: 150px;
+    }
+    .fa-bottom {
+    margin-left: 150px;
+    }
+  }
 }
 
 
 
-
+/*-----------------------------*/
 
 
 
@@ -733,11 +778,6 @@ section{
         }
       }
     }
-    .facts{
-      .row-cards{
-        flex-direction: column;
-      }
-    }
   }
   
   .skills {
@@ -750,6 +790,27 @@ section{
         }
         .item-shape{
           margin: 0 30px 60px 30px;
+        }
+      }
+    }
+  }
+  .facts{
+    .all-cont{
+      width: 100%;
+    }
+    justify-content: center;
+    .row-cards{
+      .fa-card{
+        & > div{
+          margin: 60px 0;
+          width: 180px;
+          height: 180px;
+          h2{
+            font-size: 50px;
+          }
+          p{
+            font-size: 18px;
+          }
         }
       }
     }

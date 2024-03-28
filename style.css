@@ -417,7 +417,7 @@ header .mobile-menu label span:not(:first-child) {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .facts .row-cards {
   width: 100%;
@@ -456,6 +456,7 @@ header .mobile-menu label span:not(:first-child) {
   display: block;
 }
 
+/*------------------------------*/
 @media (min-width: 1024px) {
   .wrapper {
     width: 100%;
@@ -522,7 +523,14 @@ header .mobile-menu label span:not(:first-child) {
   .top-bord:before {
     top: -28px;
   }
+  .facts .fa-top {
+    margin-top: -200px;
+  }
+  .facts .fa-bottom {
+    margin: 200px 30px 0;
+  }
 }
+/*---------------------------------------*/
 @media (max-width: 1024px) {
   section {
     min-height: 450px !important;
@@ -539,6 +547,14 @@ header .mobile-menu label span:not(:first-child) {
   }
   header .inner-header {
     justify-content: flex-end;
+  }
+  .opposite, .separator {
+    display: none;
+  }
+  .mobile-up-img {
+    transform: translateY(-100%) translateX(-50%);
+    position: relative;
+    left: 50%;
   }
   .home > div {
     height: 100vh !important;
@@ -559,6 +575,9 @@ header .mobile-menu label span:not(:first-child) {
   .skills .all-cont {
     flex-direction: column;
   }
+  .resume {
+    margin-bottom: 50px;
+  }
   .resume .all-cont {
     flex-direction: column;
   }
@@ -576,7 +595,12 @@ header .mobile-menu label span:not(:first-child) {
     left: 50%;
     transform: translateX(-50%);
   }
+  .facts .row-cards {
+    flex-direction: column;
+    padding: 100px 0;
+  }
 }
+/*--------------------------------*/
 @media (min-width: 768px) and (max-width: 1200px) {
   section {
     padding: 0 !important;
@@ -600,7 +624,14 @@ header .mobile-menu label span:not(:first-child) {
   .skills .skills-cont > div:not(:first-child) {
     margin-left: 50px;
   }
+  .facts .fa-top {
+    margin-right: 150px;
+  }
+  .facts .fa-bottom {
+    margin-left: 150px;
+  }
 }
+/*-----------------------------*/
 @media (max-width: 767px) {
   section {
     min-height: initial;
@@ -645,9 +676,6 @@ header .mobile-menu label span:not(:first-child) {
   .about .infos-txt .info-details ul li {
     font-size: 16px;
   }
-  .about .facts .row-cards {
-    flex-direction: column;
-  }
   .skills .all-cont {
     flex-direction: column;
   }
@@ -659,5 +687,22 @@ header .mobile-menu label span:not(:first-child) {
   }
   .skills .all-cont .skills-cont .item-shape {
     margin: 0 30px 60px 30px;
+  }
+  .facts {
+    justify-content: center;
+  }
+  .facts .all-cont {
+    width: 100%;
+  }
+  .facts .row-cards .fa-card > div {
+    margin: 60px 0;
+    width: 180px;
+    height: 180px;
+  }
+  .facts .row-cards .fa-card > div h2 {
+    font-size: 50px;
+  }
+  .facts .row-cards .fa-card > div p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
