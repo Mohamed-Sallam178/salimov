@@ -472,6 +472,15 @@ section{
           transform: rotate(-45deg);
         }
       }
+      &:nth-child(odd),&:nth-child(even) {
+        margin-right: 0 ;
+      }
+      &:nth-child(even) {
+        margin-top: 200px !important;
+      }
+      &:nth-child(odd) {
+          margin-top: -200px !important;
+      }
       h2{
         color: $primary-color;
         font-size: 60px;
@@ -577,11 +586,8 @@ section{
   top: -28px;
 }
 .facts{
-  .fa-top {
-    margin-top: -200px;
-  }
-  .fa-bottom {
-    margin: 200px 30px 0;
+  .row-cards{
+    padding: 0 200px;
   }
 }
 }
@@ -591,6 +597,10 @@ section{
 
 /*---------------------------------------*/
 
+
+// @media(min-width:1024px) and (max-width:1200px){
+
+// }
 
 
 @media(max-width:1024px){
@@ -680,7 +690,7 @@ section{
   section{
     padding: 0 !important;
     & > div{
-      max-width: 600px;
+      min-width: 600px;
       margin: auto;
     }
   }
@@ -710,11 +720,16 @@ section{
     }
   }
   .facts{
-    .fa-top {
-      margin-right: 150px;
-    }
-    .fa-bottom {
-    margin-left: 150px;
+    .fa-card{
+      &:nth-child(odd),&:nth-child(even) {
+        margin-top: 0 !important;
+      }
+      &:nth-child(odd){
+        margin-right: -150px;
+      }
+      &:nth-child(even) {
+        margin-right: 150px;
+      }
     }
   }
 }
@@ -812,6 +827,12 @@ section{
             font-size: 18px;
           }
         }
+        .fa-card:nth-child(even) {
+          margin-top: 200px;
+      }
+      &:nth-child(odd),&:nth-child(even) {
+          margin-top: 0;
+      }
       }
     }
   }

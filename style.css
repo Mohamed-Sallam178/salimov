@@ -442,6 +442,15 @@ header .mobile-menu label span:not(:first-child) {
 .facts .row-cards .fa-card > div > div {
   transform: rotate(-45deg);
 }
+.facts .row-cards .fa-card:nth-child(odd), .facts .row-cards .fa-card:nth-child(even) {
+  margin-right: 0;
+}
+.facts .row-cards .fa-card:nth-child(even) {
+  margin-top: 200px !important;
+}
+.facts .row-cards .fa-card:nth-child(odd) {
+  margin-top: -200px !important;
+}
 .facts .row-cards .fa-card h2 {
   color: #ffb400;
   font-size: 60px;
@@ -523,11 +532,8 @@ header .mobile-menu label span:not(:first-child) {
   .top-bord:before {
     top: -28px;
   }
-  .facts .fa-top {
-    margin-top: -200px;
-  }
-  .facts .fa-bottom {
-    margin: 200px 30px 0;
+  .facts .row-cards {
+    padding: 0 200px;
   }
 }
 /*---------------------------------------*/
@@ -606,7 +612,7 @@ header .mobile-menu label span:not(:first-child) {
     padding: 0 !important;
   }
   section > div {
-    max-width: 600px;
+    min-width: 600px;
     margin: auto;
   }
   .about .info-image img {
@@ -624,11 +630,14 @@ header .mobile-menu label span:not(:first-child) {
   .skills .skills-cont > div:not(:first-child) {
     margin-left: 50px;
   }
-  .facts .fa-top {
-    margin-right: 150px;
+  .facts .fa-card:nth-child(odd), .facts .fa-card:nth-child(even) {
+    margin-top: 0 !important;
   }
-  .facts .fa-bottom {
-    margin-left: 150px;
+  .facts .fa-card:nth-child(odd) {
+    margin-right: -150px;
+  }
+  .facts .fa-card:nth-child(even) {
+    margin-right: 150px;
   }
 }
 /*-----------------------------*/
@@ -704,5 +713,11 @@ header .mobile-menu label span:not(:first-child) {
   }
   .facts .row-cards .fa-card > div p {
     font-size: 18px;
+  }
+  .facts .row-cards .fa-card .fa-card:nth-child(even) {
+    margin-top: 200px;
+  }
+  .facts .row-cards .fa-card:nth-child(odd), .facts .row-cards .fa-card:nth-child(even) {
+    margin-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
