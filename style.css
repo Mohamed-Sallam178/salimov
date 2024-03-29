@@ -466,9 +466,6 @@ header .mobile-menu label span:not(:first-child) {
   display: block;
 }
 
-.my-protoflio {
-  padding-right: 160px !important;
-}
 .my-protoflio .all-cont {
   display: flex;
 }
@@ -616,6 +613,9 @@ header .mobile-menu label span:not(:first-child) {
   .facts .row-cards {
     padding: 0 200px;
   }
+  .my-protoflio {
+    padding-right: 160px !important;
+  }
 }
 /*---------------------------------------*/
 @media (max-width: 1024px) {
@@ -685,6 +685,9 @@ header .mobile-menu label span:not(:first-child) {
   .facts .row-cards {
     flex-direction: column;
     padding: 100px 0;
+  }
+  .my-protoflio .row-porto .arrows {
+    display: none !important;
   }
 }
 /*--------------------------------*/
@@ -797,5 +800,8 @@ header .mobile-menu label span:not(:first-child) {
   }
   .facts .row-cards .fa-card:nth-child(odd), .facts .row-cards .fa-card:nth-child(even) {
     margin-top: 0 !important;
+  }
+  .my-protoflio .all-cont, .my-protoflio .row-porto {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

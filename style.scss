@@ -498,7 +498,6 @@ section{
   }
 }
 .my-protoflio{
-  padding-right: 160px !important;
   .all-cont{
     display: flex;
     .row-porto{
@@ -671,6 +670,9 @@ section{
     padding: 0 200px;
   }
 }
+.my-protoflio{
+  padding-right: 160px !important;
+}
 }
 
 
@@ -758,6 +760,13 @@ section{
     .row-cards{
       flex-direction: column;
       padding: 100px 0;
+    }
+  }
+  .my-protoflio{
+    .row-porto{
+      .arrows{
+        display: none !important;
+      }
     }
   }
 }
@@ -912,6 +921,11 @@ section{
           margin-top: 0 !important;
       }
       }
+    }
+  }
+  .my-protoflio{
+    .all-cont,.row-porto{
+      flex-direction: column;
     }
   }
 }
