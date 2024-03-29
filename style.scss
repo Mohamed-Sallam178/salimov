@@ -52,6 +52,48 @@ section{
     color: #fff;
   }
 }
+.custom-arrow-slider {
+  span{
+    display: block;
+    -webkit-transition: 1s;
+    transition: 1s;
+    z-index: 1;
+    margin-bottom: 0;
+    width: 60px;
+    height: 60px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+    background-color: $primary-color;
+    border-radius: 50%;
+    text-align: center;
+    &::before,&::after{
+      content: "\f178";
+      font-family: FontAwesome;
+      position: absolute;
+      width: 60px;
+      line-height: 60px;
+      color: #fff;
+      transition: all .3s;
+      font-size: 25px;
+    }
+    &::before{
+      top: 0;
+      left: 0;
+    }
+    &::after{
+      top: 0;
+      left: -60px;
+    }
+  }
+  &:hover span::after{
+    left: 0 !important;
+  }
+  &:hover span::before{
+    left: 60px !important;
+  }
+}
+
 // start customize scrollbar-Y
 ::-webkit-scrollbar {
   width: 5px;
@@ -228,48 +270,6 @@ section{
       .dot{
         color: #ffb400;
         text-shadow: 8px 8px #ffb400, 20px 20px #222;
-      }
-    }
-    .slide-right {
-      span{
-        display: block;
-        -webkit-transition: 1s;
-        transition: 1s;
-        z-index: 1;
-        margin-bottom: 0;
-        width: 60px;
-        height: 60px;
-        background: none;
-        position: relative;
-        overflow: hidden;
-        background-color: $primary-color;
-        border-radius: 50%;
-        text-align: center;
-
-        &::before,&::after{
-          content: "\f178";
-          font-family: FontAwesome;
-          position: absolute;
-          width: 60px;
-          line-height: 60px;
-          color: #fff;
-          transition: all .3s;
-          font-size: 25px;
-        }
-        &::before{
-          top: 0;
-          left: 0;
-        }
-        &::after{
-          top: 0;
-          left: -60px;
-        }
-      }
-      &:hover span::after{
-        left: 0 !important;
-      }
-      &:hover span::before{
-        left: 60px !important;
       }
     }
   }
@@ -497,8 +497,86 @@ section{
     }
   }
 }
-
-// end customize skills section 
+.my-protoflio{
+  padding-right: 160px !important;
+  .all-cont{
+    display: flex;
+    .row-porto{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .porto-image{
+        img{
+        border-radius: 20px;
+        }
+      }
+      .proto-content{
+        margin-left: 40px;
+        h4{
+          font-size: 38px;
+          font-weight: bold;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+        ul{
+          li{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 50px;
+            span:first-child{
+              color: rgba(255, 255, 255, 0.7);
+              i{
+                margin-right: 7px;
+              }
+            }
+            span:last-child{
+              color: #fff;
+            }
+          }
+        }
+        a.custom-btn{
+          display: inline-block;
+          margin-top: 20px;
+          background-color: #222222;
+          color: #fff;
+          padding: 15px 40px;
+          border-radius: 40px;
+          font-size: 18px;
+          font-weight: 500;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          &::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transition: all .3s;
+            background-color: $primary-color;
+          }
+          &:hover::before{
+            width: 100%;
+            left: 0;
+          }
+          span{
+            position: relative;
+          }
+        }
+      }
+      .arrows {
+        position: absolute;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    }
+  }
+}
 
 
 
@@ -537,6 +615,9 @@ section{
   .separator,.opposite{
     height: 100vh;
     position: relative;
+  }
+  .opposite{
+    transform: translateX(-110%);
   }
   .separator{
     transform: translateX(calc(100% - -1px)); 
@@ -620,6 +701,12 @@ section{
   header .inner-header{
     justify-content: flex-end;
   }
+  .custom-arrow-slider{
+    margin: 3rem auto 0;
+    span::before{
+      transform: rotate(90deg);
+    }
+  }
   .opposite,.separator{
     display: none;
   }
@@ -635,12 +722,6 @@ section{
     .cont-sec{
       justify-content: center;
       flex-direction: column;
-    }
-    .slide-right{
-      margin: 3rem auto 0;
-      span::before{
-        transform: rotate(90deg);
-      }
     }
   }
   .about{
