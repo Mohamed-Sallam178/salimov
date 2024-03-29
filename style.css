@@ -714,10 +714,7 @@ header .mobile-menu label span:not(:first-child) {
   .facts .row-cards .fa-card > div p {
     font-size: 18px;
   }
-  .facts .row-cards .fa-card .fa-card:nth-child(even) {
-    margin-top: 200px;
-  }
   .facts .row-cards .fa-card:nth-child(odd), .facts .row-cards .fa-card:nth-child(even) {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }/*# sourceMappingURL=style.css.map */

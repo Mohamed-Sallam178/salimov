@@ -827,11 +827,8 @@ section{
             font-size: 18px;
           }
         }
-        .fa-card:nth-child(even) {
-          margin-top: 200px;
-      }
       &:nth-child(odd),&:nth-child(even) {
-          margin-top: 0;
+          margin-top: 0 !important;
       }
       }
     }
