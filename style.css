@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --primary-color: #ffb400;
   --second-bg-color:#222222;
@@ -27,6 +28,10 @@ section {
   position: relative;
   min-height: 100vh;
   height: 100vh;
+}
+
+.all-cont {
+  position: relative;
 }
 
 .fix-sec > div {
@@ -85,6 +90,17 @@ section {
 }
 .custom-arrow-slider:hover span::before {
   left: 60px !important;
+}
+
+.overlay::before {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 ::-webkit-scrollbar {
@@ -366,6 +382,7 @@ header .mobile-menu label span:not(:first-child) {
 }
 .resume .all-cont .timeline ol li .all-exp {
   padding: 10px;
+  white-space: nowrap;
 }
 .resume .all-cont .timeline ol li .all-exp .work::before {
   content: "\f0b1";
@@ -397,6 +414,7 @@ header .mobile-menu label span:not(:first-child) {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
 }
 .resume .all-cont .timeline ol li .all-exp .experience p:first-of-type {
   margin-bottom: 8px;
@@ -409,16 +427,6 @@ header .mobile-menu label span:not(:first-child) {
   background-size: cover;
   position: relative;
   display: flex;
-}
-.facts::before {
-  content: "";
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .facts .row-cards {
   width: 100%;
@@ -466,9 +474,6 @@ header .mobile-menu label span:not(:first-child) {
   display: block;
 }
 
-.my-protoflio .all-cont {
-  display: flex;
-}
 .my-protoflio .all-cont .row-porto {
   display: flex;
   justify-content: center;
@@ -479,6 +484,7 @@ header .mobile-menu label span:not(:first-child) {
 }
 .my-protoflio .all-cont .row-porto .proto-content {
   margin-left: 40px;
+  white-space: nowrap;
 }
 .my-protoflio .all-cont .row-porto .proto-content h4 {
   font-size: 38px;
@@ -532,12 +538,73 @@ header .mobile-menu label span:not(:first-child) {
 }
 .my-protoflio .all-cont .row-porto .arrows {
   position: absolute;
-  right: 5%;
+  right: -8%;
   display: flex;
   flex-direction: column;
   gap: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.testemonials {
+  background-image: url(assets/testimonials.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.testemonials .row-testemonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testemonials .row-testemonial > div {
+  text-align: center;
+  color: #fff;
+  padding: 25px;
+}
+.testemonials .row-testemonial > div .only-testemonial {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 25px;
+  width: 390px;
+  position: relative;
+}
+.testemonials .row-testemonial > div .only-testemonial::before {
+  content: "”";
+  position: absolute;
+  top: -100px;
+  left: -30px;
+  font-size: 210px;
+  color: #ffb400;
+}
+.testemonials .row-testemonial > div .only-testemonial p {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.testemonials .row-testemonial > div .only-testemonial p .opinion {
+  font-size: 20px;
+  line-height: 40px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+.testemonials .row-testemonial > div .only-testemonial p .name {
+  color: #ffb400;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.testemonials .row-testemonial > div .only-testemonial p .job {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+}
+.testemonials .row-testemonial > div .only-testemonial img {
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+  border: 4px solid #222;
 }
 
 /*------------------------------*/
@@ -615,6 +682,9 @@ header .mobile-menu label span:not(:first-child) {
   }
   .my-protoflio {
     padding-right: 160px !important;
+  }
+  .testemonials .all-cont {
+    margin: 0 180px;
   }
 }
 /*---------------------------------------*/
